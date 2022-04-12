@@ -128,7 +128,10 @@ const Product = class Product {
     }
 
     static inStock = (products) => {
-        let p = Array(this.name);
+        let p = new Array();
+        this.inStock.apply(this.inStock, products).forEach(element => {
+            console.log(element);
+        });
     }
 
 
@@ -143,7 +146,9 @@ const Product = class Product {
      * This method can also be written in one line; if doing so, consider using String interpolation when calling the product constructor
      * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array 
      */
-    static halfOff = (products) => {}
+    static halfOff = (products) => {
+        this.halfOff.apply(null, products);
+    }
 
     /**
      * *****************
@@ -158,7 +163,10 @@ const Product = class Product {
      * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array 
      * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat (currency formatting)
      */
-    static printProducts = (products) => {}
+    static printProducts = (products) => {
+        this.printProducts.apply(this.printProducts, products);
+        console.log('Product: ${}, Cost: ${}, Available: ${}');
+    }
 
  };
 
