@@ -128,10 +128,13 @@ const Product = class Product {
     }
 
     static inStock = (products) => {
-        let p = new Array();
-        this.inStock.apply(this.inStock, products).forEach(element => {
-            console.log(element);
-        });
+        for (var i = 0; i < products.length; i++)
+        {
+            if(products[i] = this.availability)
+            {
+                
+            }
+        }
     }
 
 
