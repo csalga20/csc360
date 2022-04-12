@@ -116,7 +116,20 @@ const Product = class Product {
      * This can be implmeneted in one line.
      * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array 
      */
-    static inStock = (products) => {}
+    name = String();
+    price = Number();
+    availability = String();
+    constructor(input)
+    {
+        let str = input.split(',');
+        this.name = str[0];
+        this.price = Number(str[1]);
+        this.availability = str[2];
+    }
+
+    static inStock = (products) => {
+        let p = Array(this.name);
+    }
 
 
     /**
