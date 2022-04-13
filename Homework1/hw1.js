@@ -127,15 +127,14 @@ const Product = class Product {
         this.availability = str[2];
     }
 
-    static inStock = (products) => {
-        for (var i = 0; i < products.length; i++)
+    static inStock = (products ) => {products.forEach(element => {
+        let p = new Array();
+        if (element.availability === 'In Stock')
         {
-            if(products[i] = this.availability)
-            {
-                
-            }
+            p.push(element);
         }
-    }
+        return p.length;
+    });}
 
 
     /**
