@@ -8,8 +8,6 @@ export default function Todo({ title, description, dateCreated, complete, dateCo
       <br />
       <i>
         Created on <b>{dateCreated}</b>
-        Completed: <b>{complete}</b>
-        Completed on <b>{dateCompleted}</b>
       </i>
     </div>
   );
