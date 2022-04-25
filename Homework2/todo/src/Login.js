@@ -9,8 +9,7 @@ export default function Login ({setUser})
         setUsername(evt.target.value)
     }
 
-    return 
-    (
+    return(
         <form onSubmit = {(e) => {e.preventDefault(); setUser(username)}}>
             <label htmlFor="login-username">Username:</label>
             <input type="text" name="login-username" value={username} onChange={handleUsername} 
