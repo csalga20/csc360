@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export default function CreateTodo({ dateCreated, setTodos, todos }) {
+export default function CreateTodo({ setTodos, todos }) {
   const [ title, setTitle ] = useState("")
   const [ description, setDescription ] = useState("")
   const [ date, setDate ] = useState(new Date().toLocaleString())

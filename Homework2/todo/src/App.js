@@ -6,17 +6,13 @@ import TodoList from './TodoList';
 import { useState } from 'react';
 
 function App() {
-  const [date, setDate] = useState(new Date().toLocaleString())
   const [todos, setTodos] = useState([])
-
-  function handleDate (evt) { setDate(evt.target.value) }
-
   return (
     <div>
       <Login />
       <Logout />
       <Registration />
-      <CreateTodo dateCreated={date} setTodos={setTodos} todos={todos}/>
+      <CreateTodo setTodos={setTodos} todos={todos}/>
       <TodoList todos = {todos}/>
     </div>
   );
