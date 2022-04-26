@@ -7,8 +7,13 @@ export default function Todo({ title, description, dateCreated, complete, dateCo
       <div>{description}</div>
       <br />
       <i>
-        Created on <b>{dateCreated}</b>
-        Completed: <b>{complete}</b>
+        Created on <b>{dateCreated} </b>
+      </i>
+      <label>
+         Completed?
+         <input type="checkbox"/>
+      </label>
+      <i>
         Completed on <b>{dateCompleted}</b>
       </i>
     </div>
