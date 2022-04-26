@@ -6,7 +6,7 @@ import TodoList from './TodoList';
 import { useState } from 'react';
 
 function App() {
-  const [date, setDate] = useState(Date.now())
+  const [date, setDate] = useState(new Date().getFullYear())
   const [todos, setTodos] = useState([])
 
   function handleDate (evt) { setDate(evt.target.value) }
@@ -16,7 +16,7 @@ function App() {
       <Login />
       <Logout />
       <Registration />
-      <CreateTodo dateCreated={handleDate} setTodos={setTodos} todos={todos}/>
+      <CreateTodo dateCreated={date} setTodos={setTodos} todos={todos}/>
       <TodoList todos = {todos}/>
     </div>
   );

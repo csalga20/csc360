@@ -3,7 +3,7 @@ import React, {useState} from "react";
 export default function CreateTodo({ dateCreated, setTodos, todos }) {
   const [ title, setTitle ] = useState("")
   const [ description, setDescription ] = useState("")
-  const [ date, setDate ] = useState(Date.now())
+  const [ date, setDate ] = useState(new Date().toLocaleString())
 
   function handleDate (evt) { setDate(evt.target.value) }
   function handleTitle (evt) { setTitle(evt.target.value) }
