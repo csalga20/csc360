@@ -3,15 +3,15 @@ import Login from "./Login";
 import Logout from "./Logout";
 import Registration from "./Registration";
 
-export default function UserBar({user, setUser}) {
+export default function UserBar({user, dispatch}) {
   
   if (user) {
-    return <Logout user={user} setUser={setUser} />;
+    return <Logout user={user} dispatch={dispatch} />;
   } else {
     return (
       <>
-        <Login setUser={setUser} />
-        <Registration setUser={setUser} />
+        <Login dispatch={dispatch} />
+        <Registration dispatch={dispatch} />
       </>
     );
   }

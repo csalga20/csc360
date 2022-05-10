@@ -5,8 +5,7 @@ export default function TodoList({ todos = [] }) {
   return (
     <div>
       {todos.map((p, i) => (
-        // <Post title={p.title} content={p.content} author={p.author} key={"post-" + i} />
-        <Todo {...p} key={"post-" + i} />
+         <Todo title={p.title} description={p.content} key={"post-" + i} />
       ))}
     </div>
   );

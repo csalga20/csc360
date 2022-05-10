@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Todo({ title, description, dateCreated, complete, dateCompleted }) {
+export default function Todo({ title, description, dateCreated, dateCompleted }) {
   return (
     <div>
       <h3>{title}</h3>
