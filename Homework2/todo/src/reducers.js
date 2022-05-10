@@ -31,6 +31,6 @@ function todoReducer(state, action) {
 export default function appReducer (state, action) {
     return {
         user: userReducer(state.user, action),
-        posts: todoReducer(state.posts, action)
+        todos: todoReducer(state.todos, action)
     }
 }

@@ -13,24 +13,24 @@ export default function CreateTodo({ dispatch, todos }) {
     //console.log(newPost)
     // const newPostCopy = { ...newPost }
      //setTodos([newTodo, ...todos])
-     dispatch({type: 'CREATE_TODO', title, description})
+     dispatch({type: 'CREATE_TODO', title, description: description})
   }
 
   return (
-    <>
-    <h2>Create a New Todo</h2>
-    <form onSubmit={(e) => { e.preventDefault(); handleCreate(e) }}>
-      <div>
-        Date: <b>{handleDate}</b>
-      </div>
-      <div>
-        <label htmlFor="create-title">Title:</label>
-        <input type="text" value={title} onChange={handleTitle} name="create-title" id="create-title" />
-      </div>
-      <textarea value={description} onChange={handleDescription} />
-      <input type="submit" value="Create" />
-    </form>
-    </>
+    <div>
+      <h2>Create a New Todo</h2>
+      <form onSubmit={(e) => { e.preventDefault(); handleCreate(e) }}>
+        <div>
+          Date: <b>{handleDate}</b>
+        </div>
+        <div>
+          <label htmlFor="create-title">Title:</label>
+          <input type="text" value={title} onChange={handleTitle} name="create-title" id="create-title" />
+        </div>
+        <textarea value={description} onChange={handleDescription} />
+        <input type="submit" value="Create" />
+      </form>
+    </div>
 
   );
 }
