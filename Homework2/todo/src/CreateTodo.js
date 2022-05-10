@@ -13,7 +13,7 @@ export default function CreateTodo({ dispatch, todos }) {
     //console.log(newPost)
     // const newPostCopy = { ...newPost }
      //setTodos([newTodo, ...todos])
-     dispatch({type: 'CREATE_TODO', title, description: description})
+     dispatch({type: 'CREATE_TODO', title, description: description, dateCreated: date})
   }
 
   return (
