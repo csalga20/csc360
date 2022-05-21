@@ -21,6 +21,8 @@ function todoReducer(state, action) {
             complete: action.complete
         };
         return [newTodo, ...state];
+        //case 'TOGGLE_TODO':
+        //return null;
         // case 'DELETE_POST':
         //   // implement logic for deleting post
         //   return state.filter(post => post.id != action.id)

@@ -7,7 +7,7 @@ export default function TodoList({ todos = [], dispatch}) {
     const updatedState = [... todos]
     updatedState[index] = newTodo
 
-    //dispatch({type: 'CREATE_TODO', descriptdateCompleted: Date.now(), complete: true})
+    //dispatch({type: 'TOGGLE_TODO', descriptdateCompleted: Date.now(), complete: true})
   }
 
   return (
