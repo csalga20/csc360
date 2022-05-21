@@ -16,7 +16,9 @@ function todoReducer(state, action) {
         const newTodo = {
             title: action.title,
             description: action.description,
-            dateCreated: action.date,
+            dateCreated: Date.now(),
+            dateCompleted: null,
+            complete: action.complete
         };
         return [newTodo, ...state];
         // case 'DELETE_POST':
