@@ -2,18 +2,16 @@ import React from "react";
 import Todo from "./Todo";
 
 export default function TodoList({ todos = [], dispatch}) {
-  function updateTodo(index, newTodo)
-  {
-    const updatedState = [... todos]
-    updatedState[index] = newTodo
+  const updateTodo = (id, updatedTodo) => {
+    const updatedTodos = todos.map((todo) => todo.id === id ? updatedTodo : todo)
 
-    //dispatch({type: 'TOGGLE_TODO', descriptdateCompleted: Date.now(), complete: true})
+    dispatch({type: 'TOGGLE_TODO', updatedTodos})
   }
 
   return (
     <div>
       {todos.map((p, i) => (
-         <Todo title={p.title} description={p.description} dateCreated={p.dateCreated} dateCompleted={p.dateCompleted} complete={p.complete} updateTodo={updateTodo} index={i} key={"post-" + i} />
+         <Todo  {...p} updateTodo={updateTodo} key={"post-" + i} />
       ))}
     </div>
   );

@@ -16,12 +16,14 @@ function todoReducer(state, action) {
         const newTodo = {
             title: action.title,
             description: action.description,
-            dateCreated: Date.now(),
-            dateCompleted: null,
-            complete: action.complete
+            dateCreated: action.dateCreated,
+            dateCompleted: action.dateCompleted,
+            complete: action.complete,
+            id: action.id
         };
         return [newTodo, ...state];
-        //case 'TOGGLE_TODO':
+        case 'TOGGLE_TODO':
+            return action.updatedTodos
         //return null;
         // case 'DELETE_POST':
         //   // implement logic for deleting post
