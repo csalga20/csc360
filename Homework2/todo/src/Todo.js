@@ -21,6 +21,8 @@ export default function Todo({ title, description, dateCreated, dateCompleted, c
       <input type="checkbox" value={checked} onClick={handleToggleEvent}/>
       <br />
       Completed on <b>{dateCompleted}</b>
+      <br />
+      <input type="button" value="Delete todo"onClick={() => deleteTodo(id)}/>
     </div>
   );
 }
