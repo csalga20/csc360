@@ -11,7 +11,7 @@ export default function TodoList({ todos = [], dispatch}) {
   return (
     <div>
       {todos.map((p, i) => (
-         <Todo  {...p} updateTodo={updateTodo} key={"post-" + i} />
+         <Todo  {...p} updateTodo={updateTodo} key={p.id} />
       ))}
     </div>
   );
