@@ -8,7 +8,7 @@ export default function CreateTodo({ dispatch, todos }) {
   function handleDate (evt) { setDate(evt.target.value) }
   function handleTitle (evt) { setTitle(evt.target.value) }
   function handleDescription (evt) { setDescription(evt.target.value) }
-  function handleCreate (evt) {  
+  function handleCreate () {  
     //const newTodo = { title, description, dateCreated: date}
     //console.log(newPost)
     // const newPostCopy = { ...newPost }

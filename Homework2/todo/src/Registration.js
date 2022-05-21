@@ -15,7 +15,8 @@ export default function Registration({dispatch}) {
         name="register-password-repeat"
         id="register-password-repeat"
       />
-      <input type="submit" value="Register" />
+      <input type="submit" value="Register" 
+        disabled={formData.username.length === 0 || formData.password.length === 0 || formData.password !== formData.passwordRepeat}/>
     </form>
   );
 }
