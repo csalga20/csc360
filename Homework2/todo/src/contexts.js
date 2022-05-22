@@ -1,3 +1,4 @@
-import { createContext } from "react";
+import { createContext, useReducer } from "react";
+import appReducer from "./reducers";
 
-export const StateContext = createContext
+export const StateContext = createContext(useReducer(appReducer, {user: '',todos: []}))
