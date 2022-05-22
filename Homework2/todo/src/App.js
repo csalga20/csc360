@@ -3,6 +3,7 @@ import CreateTodo from './CreateTodo';
 import Header from './Header';
 import TodoList from './TodoList';
 import React, { useEffect, useReducer, useState, createContext } from 'react';
+import { useResource } from "react-request-hook";
 import appReducer from './reducers';
 
 function App() {
@@ -16,6 +17,19 @@ function App() {
   //  console.log('running')
   //}, [count]
   //)
+  const [todos, getTodos] = useResource(() => ({
+    url: "/todos",
+    method: "get",
+  }));
+
+  useEffect(getTodos, [])
+
+  useEffect(() => {
+    if (todos && todos.data) {
+      console.log(todos.data.reverse());
+      dispatch({ type: "FETCH_TODOS", todos: todos.data });
+    }
+  }, [todos]);
 
   useEffect(() => {
     console.log('User effect cooking')
