@@ -29,7 +29,7 @@ export default function CreateTodo({ dispatch, todos }) {
 
     createTodo(newTodo)
      dispatch({type: 'CREATE_TODO', title, description: description, dateCreated: Date.now(), dateCompleted: undefined, complete: false, id: Math.floor(Math.random()*1000000)})
-     dispatch({type: "CREATE_TODO", ...newTodo})
+     //dispatch({type: "CREATE_TODO", ...newTodo})
   }
 
   return (

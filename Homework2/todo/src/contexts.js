@@ -1,4 +1,12 @@
 import { createContext, useReducer } from "react";
 import appReducer from "./reducers";
 
-export const StateContext = createContext(useReducer(appReducer, {user: '',todos: []}))
+
+const StateContext = createContext(
+    { 
+      state: {},
+      dispatch: () => {}
+    }
+)
+
+export default StateContext;

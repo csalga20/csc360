@@ -61,6 +61,13 @@
       "dateCreated": 1653191655766,
       "complete": false,
       "id": 389420
+    },
+    {
+      "title": "testing",
+      "description": "testing post ",
+      "dateCreated": 1653296140879,
+      "complete": false,
+      "id": 836014
     }
   ],
   "users": [
@@ -68,6 +75,16 @@
       "id": 1,
       "username": "testuser",
       "password": "badpassword"
+    },
+    {
+      "username": "csalga20",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "username": "helloWas",
+      "password": "12345",
+      "id": 3
     }
   ]
 }
