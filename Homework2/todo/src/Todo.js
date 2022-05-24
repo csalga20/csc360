@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Todo({ title, description, dateCreated, dateCompleted, complete, id, updateTodo, deleteTodo}) {
+export default function Todo({ title, description, dateCreated, dateCompleted, complete, id, updateTodo, deleteTodo, deleteUseTodo}) {
 
   const [checked, updatedChecked] = useState(false)
   const handleToggleEvent = (event) => {
@@ -9,7 +9,11 @@ export default function Todo({ title, description, dateCreated, dateCompleted, c
     const updatedTodo = {title, description, dateCreated, id, dateCompleted: Date.now(), complete: !complete}
     updateTodo(id, updatedTodo)
   }
-
+  const handleDeleteEvent = (event) => {
+    deleteTodo(id)
+    deleteUseTodo(id)
+  }
+  
   return (
     <div>
       <h3>{title}</h3>
@@ -22,7 +26,7 @@ export default function Todo({ title, description, dateCreated, dateCompleted, c
       <br />
       Completed on <b>{dateCompleted}</b>
       <br />
-      <input type="button" value="Delete todo"onClick={() => deleteTodo(id)}/>
+      <input type="button" value="Delete todo" onClick={handleDeleteEvent}/>
     </div>
   );
 }
