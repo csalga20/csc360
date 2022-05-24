@@ -8,17 +8,19 @@ export default function TodoList({ todos = [], dispatch}) {
 
     dispatch({type: 'TOGGLE_TODO', updatedTodos})
   }
-  //const [ todo, updateUseTodo ] = useResource((id) => ({
-    //url: `/todos/${id}`,
-    //method: 'PUT',
-    //data: {id}
-  //}))
+
+
+  const [id, updateUseTodo] = useResource((id) => ({
+    url: `/todos/${id}`,
+    method: 'PUT',
+    data: {id}
+  }))
 
   const deleteTodo = (id) => {
     const updatedTodos = todos.filter((todo) => todo.id !== id)
     dispatch({type: 'DELETE_TODO', updatedTodos})
   }
-  const [ todo, deleteUseTodo ] = useResource((id) => ({
+  const [todo, deleteUseTodo ] = useResource((id) => ({
     url: `/todos/${id}`,
     method: 'DELETE',
     data: {id}
@@ -27,7 +29,7 @@ export default function TodoList({ todos = [], dispatch}) {
   return (
     <div>
       {todos.map((p, i) => (
-         <Todo  {...p} updateTodo={updateTodo} deleteTodo={deleteTodo} deleteUseTodo={deleteUseTodo} key={p.id} />
+         <Todo  {...p} updateTodo={updateTodo} deleteTodo={deleteTodo} deleteUseTodo={deleteUseTodo} updateUseTodo={updateUseTodo} key={p.id} />
       ))}
     </div>
   );
