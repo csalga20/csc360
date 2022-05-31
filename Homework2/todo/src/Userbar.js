@@ -5,7 +5,7 @@ import Registration from "./Registration";
 import StateContext from "./Contexts";
 
 export default function UserBar({user, dispatch}) {
-  //const user = useContext(StateContext)
+  const {state, dispatch} = useContext(StateContext)
 
   if (user) {
     return <Logout user={user} dispatch={dispatch} />;
